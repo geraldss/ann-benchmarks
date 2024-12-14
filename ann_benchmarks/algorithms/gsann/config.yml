@@ -1,0 +1,19 @@
+float:
+  any:
+  - base_args: ['@metric']
+    constructor: GSann
+    disabled: false
+    docker_tag: ann-benchmarks-gsann
+    module: ann_benchmarks.algorithms.gsann
+    name: gsann
+    run_groups:
+      gsann0:
+        arg_groups: [{alg: 0}]
+      gsann1:
+        arg_groups: [{alg: 1}]
+      gsann2:
+        arg_groups: [{alg: 2}]
+      gsann3:
+        arg_groups: [{alg: 3}]
+      gsann4:
+        arg_groups: [{alg: 4}]
