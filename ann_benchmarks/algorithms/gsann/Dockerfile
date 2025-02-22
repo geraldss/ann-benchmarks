@@ -1,6 +1,6 @@
 FROM ann-benchmarks
 
-COPY --chmod=0755 ./annbench-linux-arm64 /home/gsann/gsann
+COPY --chmod=0755 ./annbench-linux-amd64 /home/gsann/gsann
 RUN chmod +x /home/gsann/gsann
 
 RUN touch /home/gsann/data
