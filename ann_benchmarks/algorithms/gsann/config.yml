@@ -1,5 +1,5 @@
 float:
-  any:
+  euclidean:
   - base_args: ['@metric']
     constructor: GSann
     disabled: false
@@ -7,5 +7,16 @@ float:
     module: ann_benchmarks.algorithms.gsann
     name: gsann
     run_groups:
-      gsann-80-10:
-        args: [[1], [1.0], [1.0]]
+      gsann-fash-990:
+        args: [[1], [1.0], [0.48], [0.4], [2.0], [100.0], [100.0]]
+
+  angular:
+  - base_args: ['@metric']
+    constructor: GSann
+    disabled: false
+    docker_tag: ann-benchmarks-gsann
+    module: ann_benchmarks.algorithms.gsann
+    name: gsann
+    run_groups:
+      gsann-glove25-900:
+        args: [[1], [1.0], [0.48], [0.4], [2.0], [100.0], [100.0]]

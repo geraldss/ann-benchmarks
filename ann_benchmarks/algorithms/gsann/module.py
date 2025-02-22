@@ -6,12 +6,15 @@ from ..base.module import BaseANN
 
 
 class GSann(BaseANN):
-    def __init__(self, metric, alg, r0, r1):
+    def __init__(self, metric, alg, r, p, s, sv, g, gv):
         self._metric = metric
         self._alg = alg
-        self._r0 = r0
-        self._r1 = r1
-        self._s = numpy.float32(0)
+        self._r = r
+        self._p = p
+        self._s = s
+        self._sv = sv
+        self._g = g
+        self._gv = gv
         self._qsig = None
         self._rsig = None
 
@@ -34,8 +37,12 @@ class GSann(BaseANN):
             execpath,
             "-dist", self._metric,
             "-alg", str(self._alg),
-            "-r0", str(self._r0),
-            "-r1", str(self._r1),
+            "-r", str(self._r),
+            "-p", str(self._p),
+            "-s", str(self._s),
+            "-sv", str(self._sv),
+            "-g", str(self._g),
+            "-gv", str(self._gv),
             "-card", str(card),
             "-dim", str(dim),
             "-data", data,
@@ -101,4 +108,4 @@ class GSann(BaseANN):
         return arr
 
     def __str__(self):
-        return f"gsann dist={self._metric} alg={self._alg} r0={self._r0} r1={self._r1}"
+        return f"gsann dist={self._metric} alg={self._alg} r={self._r} p={self._p} s={self._s} sv={self._sv} g={self._g} gv={self._gv}"
