@@ -114,4 +114,4 @@ class GSann(BaseANN):
         return arr
 
     def __str__(self):
-        return f"gsann r={self._r} p={self._p} s={self._s} sv={self._sv} g={self._g} gv={self._gv} cp={self._cp} cs={self._cs} v={self._v}"
+        return f"gsann a={self._alg} r={self._r} p={self._p} s={self._s} sv={self._sv} g={self._g} gv={self._gv} cp={self._cp} cs={self._cs} v={self._v}"
